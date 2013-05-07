@@ -29,6 +29,7 @@ tests/test_pair_tcp
 tests/test_reqrep_inproc
 tests/test_reqrep_ipc
 tests/test_reqrep_tcp
+tests/test_disconnect_inproc
 tests/test_shutdown_stress
 tests/test_hwm
 tests/test_timeo
