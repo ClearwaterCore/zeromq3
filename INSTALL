@@ -1,6 +1,35 @@
 Installation Instructions
 *************************
 
+Project Clearwater Instructions
+===============================
+
+This fork of the ZeroMQ project has been set up to build easily
+into a Debian package, which can be installed with the `dpkg` tool.
+
+To build the package, simply clone this repository, then, at the
+top level of the workspace run:
+
+    sudo apt-get install build-essential libpgm-dev debhelper autotools-dev pkg-config
+    ./autogen.sh
+    fakeroot debian/rules clean binary
+
+This will create three Debian package files in the parent folder to
+the project:
+
+ * `libzmq3_<version>.deb` - The library itself
+ * `libzmq3-dev_<version>.deb` - Header files and static libraries
+ * `libzmq3-dbg_<version>.deb` - Debug symbols
+
+These can then be installed on an Ubuntu system with
+
+    sudo dpkg -i libzmq3_<version>.deb
+
+or similar.
+
+Upstream Instructions
+=====================
+
 Copyright (C) 1994, 1995, 1996, 1999, 2000, 2001, 2002, 2004, 2005,
 2006, 2007 Free Software Foundation, Inc.
 
