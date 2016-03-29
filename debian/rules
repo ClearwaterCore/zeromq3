@@ -4,7 +4,7 @@
 	dh $@ --with=autotools-dev
 
 override_dh_auto_configure:
-	dh_auto_configure -- --with-system-pgm
+	dh_auto_configure -- 
 
 override_dh_strip:
 	dh_strip --dbg-package=libzmq3-dbg
